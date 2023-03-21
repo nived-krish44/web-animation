@@ -1,0 +1,69 @@
+.block{
+    position:relative;
+    width:300px;
+    height: 300px;
+    background: black;
+}
+.block::before{
+    content: '';
+    position: absolute;
+    left:-2px;
+    right:-2px;
+    top:-2px;
+    bottom:-2px;
+    background-color: green;
+    z-index: -1;
+    
+
+}
+.block::after{
+    content: '';
+    position: absolute;
+    background-color: green;
+    left:-2px;
+    right:-2px;
+    top:-2px;
+    bottom:-2px;
+    z-index: -2;
+    filter: blur(10px);
+    animation : animate 3s  ease forwards 
+
+    
+}
+.text{
+    background-color: grey;
+    width:50px;
+    height:50px;
+    animation : drop 3s  ease forwards 
+
+}
+/*.text:hover span{
+    display:none;
+}*/
+.text:hover:before{
+    content: 'newwwwwwwwwwww';
+    display:inline;
+}
+@keyframes animate {
+    0%{
+        
+        filter: blur(0px);
+    }
+    50%{
+        filter: blur(20px);
+    }
+    75%{
+        filter: blur(30px);
+    }
+    100%{
+        filter: blur(40px);
+    }
+}
+@keyframes drop{
+    0%{
+        transform: translateY(-200px)
+    }
+    100%{
+        transform:translateY(150px)
+    }
+}

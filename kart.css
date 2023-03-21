@@ -1,0 +1,59 @@
+html, body{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    margin: 0;
+
+}
+.grass,.sky,.road{
+    position: relative;
+
+}
+.sky{
+    height: 40%;
+    background: skyblue;
+    animation-name: skyclr;
+    animation-duration: 5s;
+}
+.grass{
+    height: 30%;
+    background: green;
+
+}
+.road{
+    height: 30%;
+    background: black; 
+    box-sizing :border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width:100%;
+}
+.lines{
+    box-sizing:border-box;
+    border: 3px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top:45%;
+}
+.mario{
+    position: absolute;
+    top:-40px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    animation-name: drive;
+    animation-duration: 5s;
+
+
+
+
+}
+@keyframes drive{
+    from{transform:translateX(0px)}
+    to{transform:translateX(1500px)}
+}
+@keyframes skyclr{
+    from{background-color: skyblue;}
+    to{background-color: orange;}
+}

@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    position: relative;
+}
+body.pop-up{
+    background: #222;
+
+}
+#pop-up{
+    position: relative;
+    top: -400px;
+    margin : 0 auto;
+    text-align: center;
+    width :500px;
+    transform-origin: 10px 10px;
+    animation: drop 2s ease forwards,
+               swing 2s 3s ease forwards;
+               
+}
+.kunfu{
+    position: relative;
+    top:4px;
+    left: -46px;
+    width: 50px;
+    height: 50px;
+
+
+}
+.container{
+    background: #f3dedea1;
+    width: 300px;
+    position: relative;
+    border: solid;
+    border-radius: 2%;
+    top: 0px;
+    left: 68px;
+}
+.cross{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #607d8b;
+    top: -133px;
+    left: 0px;
+    position: relative;
+    text-align: center
+
+}
+button{
+    background: #601e1e;
+}
+@keyframes drop{
+    0%{opacity :0}
+    75%{
+        transform:translateY(500px)
+    }
+    100%{transform:translateY(450px);opacity:1;}
+
+}
+@keyframes swing{
+    0%{transform: translateY(450px) rotateZ(0deg);}
+    50%{transform:translateY(450px) rotateZ(90deg);}
+    75%{transform:translateY(450px) rotateZ(65deg);}
+    100%{transform: translateY(450px) rotateZ(76deg);}
+}
+.History{
+    background: #dabcbc;
+    width: 251px;
+    position: relative;
+    border: solid;
+    border-radius: 2%;
+    top: -400px;
+    left: 636px;
+    height: 137px;
+    text-align: center;
+    font-size: 10px;
+    animation : drop 2s 3s ease forwards
+
+}
+.History:hover{
+    background: #c5790f;
+    
+}
